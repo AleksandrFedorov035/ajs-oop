@@ -3,14 +3,14 @@ import Zombie from "../Zombie";
 import Daemon from "../Daemon";
 
 test.each([
-    ["name", "m", "Bowman"],
-    ["name", "mmmmmmmmmmm", "Bowman"],
-  ])("testing lenght of name", (_, name, length) => {
-      expect(() => {new Character(name, length)}).toThrow(new Error("строка, min - 2 символа, max - 10"));
+    ["m", "Bowman"],
+    ["mmmmmmmmmmm", "Bowman"],
+  ])("testing lenght of name", (name, type) => {
+      expect(() => {new Character(name, type)}).toThrow(new Error("строка, min - 2 символа, max - 10"));
   });
   
   test('typeError', () => {
-      expect(() => { new Character('Name', 'gnome')}).toThrow(new Error("Выберите другой тип игрока"));
+      expect(() => {new Character('Name', 'gnome')}).toThrow(new Error("Нету такого персонажа"));
   });
   
   test('levelUp check', () => {
