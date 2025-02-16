@@ -28,14 +28,13 @@ export default class Character {
           this.defence = this.defence + (this.defence * 20) / 100;
           this.health = 100;
         } else {
-          throw new Error("Показатель жизни равен 0");
+          throw new Error("нельзя повысить левел умершего");
         }
       }
     
       damage(points) {
-        this.health -= points * (1 - this.defence / 100);
-        if (this.health < 0) {
-          throw new Error("Показатель жизни < 0");
-        }
+        if (this.health >= 0) {
+          this.health -= points * (1 - this.defence / 100);
+        } 
       }
 }
