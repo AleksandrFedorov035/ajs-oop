@@ -1,4 +1,4 @@
-const path = require('node:path');
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {

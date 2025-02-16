@@ -1,7 +1,7 @@
-import '../js/Сharacter';
-import '../js/Bowman';
-import '../js/Swordsman';
-import '../js/Undead';
-import '../js/Zombie';
-import '../js/Magician';
-import '../js/Daemon';
+import '../src/js/Character';
+import '../src/js/Bowman';
+import '../src/js/Swordsman';
+import '../src/js/Undead';
+import '../src/js/Zombie';
+import '../src/js/Magician';
+import '../src/js/Daemon';
